@@ -86,13 +86,14 @@
 .search-label {
     display: flex;
     align-items: center;
+    justify-content: center;
     color: var(--secondary-text-color);
 }
 
-.nav-profile-picture-container {
+.nav-profile-container {
     margin-left: 15px;
-    display: flex;
-    align-items: center;
+    position: relative;
+    display: inline-block;
 }
 
 .nav-account-button {
@@ -105,6 +106,99 @@
     background-color: transparent;
     color: var(--secondary-text-color);
     cursor: pointer;
+}
+
+.transparent-overlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &.open {
+        display: unset;
+    }
+}
+
+.account-dropdown {
+    width: 250px;
+    border-radius: 5px;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--highlight-color);
+    transform: scale(0);
+    transform-origin: 100% 0;
+    box-shadow: 0 3px 6px 0 rgba(#000000, .3);
+    overflow: hidden;
+    transition: .15s;
+
+    &.open {
+        transform: scale(1);
+    }
+
+    &.close {
+        transform: scale(0);
+    }
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--light-highlight-color);
+}
+
+.user-button {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        background-color: darken(#FFFFFF, 8);
+    }
+}
+
+.account-name, .account-user-name {
+    margin: 3px 0;
+}
+
+.account-user-name {
+    color: var(--secondary-text-color);
+}
+
+.account-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-button {
+    padding: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        background-color: darken(#FFFFFF, 8);
+    }
+}
+
+.account-button-icon {
+    margin-right: 10px;
+    color: var(--secondary-text-color);
+
+    &.theme-color {
+        color: var(--theme-color);
+    }
 }
 
 .nav-tweet-button {
@@ -120,6 +214,177 @@
     box-shadow: 0 2px 3px 0 rgba(#000000, .3);
     cursor: pointer;
     transition: .2s;
+
+    &:hover {
+        background-color: lighten(#1DA1F2, 12);
+    }
+
+    &:active {
+        box-shadow: 0 5px 10px 0 rgba(#000000, .3);
+    }
+}
+
+.dark-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000000, .3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.tweet-modal-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.tweet-modal {
+    width: 500px;
+    margin-top: 40px;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    flex-direction: column;
+    background-color: var(--highlight-color);
+    box-shadow: 0 3px 6px 0 rgba(#000000, .3);
+}
+
+.tweet-modal-row {
+    padding: 8px;
+    display: flex;
+
+    &.tweet-info {
+        padding: 8px 16px;
+    }
+
+    &.close, &.charachter-count {
+        justify-content: flex-end;
+    }
+
+    &.normal {
+        padding: 8px 0;
+    }
+}
+
+.tweet-modal-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &.user {
+        width: auto;
+        margin-right: 20px;
+    }
+}
+
+.tweet-modal-close-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--theme-color);
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        background-color: rgba(29, 161, 242, .12);
+    }
+}
+
+.tweet-modal-user-image {
+    color: var(--secondary-text-color);
+}
+
+.tweet-modal-input {
+    height: 100%;
+    margin-top: 17px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    word-wrap: break-word;
+    resize: none;
+    display: flex;
+}
+
+.charachter-count-display {
+    margin: 0;
+}
+
+.limit-reached {
+    color: #ff1717;
+    font-weight: 600;
+}
+
+.answer-select {
+    height: 36px;
+    margin: 0;
+    padding: 0 12px;
+    border: none;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: var(--theme-color);
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        background-color: rgba(29, 161, 242, .12);
+    }
+}
+
+.answer-select-icon {
+    margin-right: 5px;
+}
+
+.tweet-modal-icon-button {
+    margin: 0;
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--theme-color);
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        background-color: rgba(29, 161, 242, .12);
+    }
+}
+
+.tweet-modal-button {
+    height: 42px;
+    margin-left: auto;
+    padding: 0 30px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--theme-color);
+    color: var(--highlight-color);
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 2px 3px 0 rgba(#000000, .3);
 
     &:hover {
         background-color: lighten(#1DA1F2, 12);
