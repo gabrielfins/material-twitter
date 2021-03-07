@@ -1,0 +1,36 @@
+{
+    "tweets": [
+        {
+            "id": 0,
+            "userImageUrl": "",
+            "userName": "Usuário",
+            "userUsername": "usuario",
+            "timeFromPosting": "10h",
+            "timePosted": "15:08",
+            "isUserFollowed": true,
+            "tweetText": "Texto do tweet",
+            "tweetImageUrl": "",
+            "numberOfComments": 9,
+            "numberOfRetweets": 18,
+            "numberOfLikes": 814,
+            "isTweetRetweeted": true,
+            "isTweetLiked": true
+        },
+        {
+            "id": 0,
+            "userImageUrl": "",
+            "userName": "Corno",
+            "userUsername": "corno",
+            "timeFromPosting": "15h",
+            "timePosted": "13:07",
+            "isUserFollowed": false,
+            "tweetText": "Texto do tweet",
+            "tweetImageUrl": "",
+            "numberOfComments": 9,
+            "numberOfRetweets": 18,
+            "numberOfLikes": 814,
+            "isTweetRetweeted": false,
+            "isTweetLiked": false
+        }
+    ]
+}

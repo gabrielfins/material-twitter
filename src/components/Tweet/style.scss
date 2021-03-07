@@ -24,6 +24,10 @@
     display: flex;
     align-items: center;
 
+    &.align-start {
+        align-items: flex-start;
+    }
+
     &.operations {
         margin-left: 52px;
     }
@@ -52,6 +56,7 @@
 .tweet-icon-button {
     width: 38px;
     height: 38px;
+    margin-right: 3px;
     padding: 0;
     border: none;
     border-radius: 50%;
@@ -64,19 +69,35 @@
     transition: .2s;
     cursor: pointer;
 
-    &.retweet {
-        color: var(--green);
+    &.operation {
+        color: var(--secondary-text-color);
+    }
 
+    &.comment {
         &:hover {
+            color: var(--blue);
+        }
+    }
+
+    &.retweet {
+        &:hover {
+            color: var(--green);
             background-color: rgba(#17BF63, .12);
+        }
+
+        &.retweeted {
+            color: var(--green);
         }
     }
 
     &.like {
-        color: var(--pink);
-
         &:hover {
+            color: var(--pink);
             background-color: rgba(#E0245E, .12);
+        }
+
+        &.liked {
+            color: var(--pink);
         }
     }
 
