@@ -1,0 +1,147 @@
+.tweet {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &.user {
+        width: auto;
+        margin-right: 10px;
+    }
+}
+
+.user-image {
+    color: var(--secondary-text-color);
+}
+
+.tweet-row {
+    display: flex;
+    align-items: center;
+
+    &.operations {
+        margin-left: 52px;
+    }
+
+    & .transparent-overlay {
+        z-index: 1;
+    }
+}
+
+.tweet-user-info {
+    margin: 0;
+    display: flex;
+
+    & span {
+        margin-right: 5px;
+        color: var(--primary-text-color);
+        font-weight: 600;
+
+        &:not(.user-name) {
+            color: var(--secondary-text-color);
+            font-weight: 400;
+        }
+    }
+}
+
+.tweet-icon-button {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: transparent;
+    color: var(--theme-color);
+    transition: .2s;
+    cursor: pointer;
+
+    &.retweet {
+        color: var(--green);
+
+        &:hover {
+            background-color: rgba(#17BF63, .12);
+        }
+    }
+
+    &.like {
+        color: var(--pink);
+
+        &:hover {
+            background-color: rgba(#E0245E, .12);
+        }
+    }
+
+    &:hover {
+        background-color: rgba(#1DA1F2, .12);
+    }
+}
+
+.ripples-green .ripple {
+    background-color: var(--green);
+}
+
+.ripples-pink .ripple {
+    background-color: var(--pink);
+}
+
+.tweet-content-text {
+    margin: 0 0 10px 0;
+}
+
+.operation-container {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.tweet-extras-container {
+    margin-left: auto;
+}
+
+.dropdown-container {
+    margin-left: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.tweet-dropdown {
+    width: 350px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    box-shadow: 0 2px 4px 0 rgba(#000000, .3);
+
+    & button {
+        height: 44px;
+        padding: 0 15px;
+        border: none;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+            background-color: darken(#FFFFFF, 8);
+        }
+    }
+}
+
+.dropdown-icon {
+    margin-right: 15px;
+    color: var(--secondary-text-color);
+}

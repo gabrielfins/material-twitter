@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import 'scss/normalize.scss';
 
+@mixin defaultStates {
+    &:hover {
+        background-color: lighten($color: #000000, $amount: 0);
+    }
+}
+
 :root {
+    --blue: #1DA1F2;
+    --yellow: #FFAD1F;
+    --pink: #E0245E;
+    --purple: #794BC4;
+    --orange: #F45D22;
+    --green: #17BF63;
     --background-color: #ECEFF1;
     --highlight-color: #FFFFFF;
     --light-highlight-color: #e2e2e2;
@@ -10,7 +22,7 @@
     --secondary-text-color: #9E9E9E;
     --tertiary-text-color: #757575;
     --theme-text-color: #FFFFFF;
-    --theme-color: #1DA1F2;
+    --theme-color: var(--blue);
 }
 
 * {
@@ -31,7 +43,7 @@ body {
     background-color: var(--background-color);
 }
 
-.ripples-blue .ripple {
+.ripples-theme .ripple {
     background-color: var(--theme-color);
 }
 

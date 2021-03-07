@@ -1,0 +1,24 @@
+.page-container {
+    margin: 20px 80px;
+    display: flex;
+}
+
+.page-content {
+    width: calc(30% - 20px);
+    margin-right: 20px;
+    background-color: var(--highlight-color);
+    box-shadow: 0 3px 5px 0 rgba(#000000, .3);
+    
+    &-left {
+        width: calc(30% - 20px);
+        margin-left: 20px;
+        background-color: var(--highlight-color);
+        box-shadow: 0 3px 5px 0 rgba(#000000, .3);
+    }
+}
+
+.page-main-content {
+    width: 40%;
+    background-color: var(--highlight-color);
+    box-shadow: 0 3px 5px 0 rgba(#000000, .3);
+}
