@@ -17,20 +17,36 @@
             "isTweetLiked": true
         },
         {
-            "id": 0,
+            "id": 1,
             "userImageUrl": "",
             "userName": "Corno",
             "userUsername": "corno",
             "timeFromPosting": "15h",
             "timePosted": "13:07",
             "isUserFollowed": false,
-            "tweetText": "Texto do tweet",
-            "tweetImageUrl": "",
-            "numberOfComments": 9,
-            "numberOfRetweets": 18,
-            "numberOfLikes": 814,
+            "tweetText": "CEna foda",
+            "tweetImageUrl": "2.png",
+            "numberOfComments": 237,
+            "numberOfRetweets": "5k",
+            "numberOfLikes": "18k",
             "isTweetRetweeted": false,
             "isTweetLiked": false
+        },
+        {
+            "id": 2,
+            "userImageUrl": "FOTO.jpg",
+            "userName": "Gabriel",
+            "userUsername": "gabrielfins",
+            "timeFromPosting": "21h",
+            "timePosted": "00:47",
+            "isUserFollowed": true,
+            "tweetText": "Céu foda fodase",
+            "tweetImageUrl": "sky.jpg",
+            "numberOfComments": "18k",
+            "numberOfRetweets": "156k",
+            "numberOfLikes": "960k",
+            "isTweetRetweeted": true,
+            "isTweetLiked": true
         }
     ]
 }

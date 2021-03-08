@@ -2,16 +2,18 @@ import './style.scss';
 import '@gabrielfins/ripple-effect';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { MdHome, MdExplore, MdNotifications, MdEmail, MdSearch, MdSubject, MdList, MdBookmark, MdSettings, MdShowChart, MdAttachMoney, MdHelpOutline, MdBrush, MdClose, MdImage, MdGif } from 'react-icons/md';
+import { MdHome, MdExplore, MdNotifications, MdEmail, MdSearch, MdSubject, MdList, MdBookmark, MdSettings, MdShowChart, MdAttachMoney, MdHelpOutline, MdBrush, MdClose } from 'react-icons/md';
 import { FaTwitter, FaUserCircle } from 'react-icons/fa';
-import { BiWorld, BiPoll } from 'react-icons/bi';
-import { HiOutlineEmojiHappy } from 'react-icons/hi';
-import { IoCalendarSharp } from 'react-icons/io5';
+import TweetComposer from '../TweetComposer';
 
 export default function Navbar() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const [isModalOpen, setModalOpen] = useState(false);
-    let [charachterCount, setCharachterCount] = useState(0);
+
+    const openModal = (value: any) => {
+        setModalOpen(value);
+        isModalOpen ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'hidden';
+    }
 
     return (
         <nav className="navbar">
@@ -59,40 +61,18 @@ export default function Navbar() {
                                 </div>
                             </div>
                         </div>
-                    <button className="ripple-effect ripples-light nav-tweet-button" onClick={ ()=> setModalOpen(!isModalOpen) }>Tweetar</button>
+                    <button className="ripple-effect ripples-light nav-tweet-button" onClick={ () => openModal(!isModalOpen) }>Tweetar</button>
                 </div>
             </div>
             {isModalOpen &&
                 <div className="tweet-modal-container">
-                    <div className="dark-overlay" onClick={ ()=> setModalOpen(!isModalOpen) }></div>
+                    <div className="dark-overlay" onClick={ () => openModal(!isModalOpen) }></div>
                     <div className="tweet-modal">
-                        <div className="close tweet-modal-row">
-                            <button className="ripple-effect ripples-theme tweet-modal-close-button" onClick={ ()=> setModalOpen(!isModalOpen) }><MdClose size="1.7em" /></button>
+                        <div className="tweet-modal-close-row">
+                            <button className="ripple-effect ripples-theme tweet-modal-close-button" onClick={ () => openModal(!isModalOpen) }><MdClose size="1.7em" /></button>
                         </div>
                         <div className="divider"></div>
-                        <div className="tweet-info tweet-modal-row">
-                            <div className="user tweet-modal-column">
-                                <FaUserCircle className="tweet-modal-user-image" size="3.2em" />
-                            </div>
-                            <div className="tweet-modal-column">
-                                <textarea onChange={ e => setCharachterCount(e.target.value.length) } className="tweet-modal-input" rows={ 4 } placeholder="O que está acontecendo?"/>
-                                <div className="charachter-count tweet-modal-row">
-                                    <p className="charachter-count-display"><span className={ charachterCount > 280 ? 'limit-reached' : '' }>{ charachterCount }</span><span>/280</span></p>
-                                </div>
-                                <div className="normal tweet-modal-row">
-                                    <button className="ripple-effect ripples-theme answer-select"><BiWorld className="answer-select-icon" size="1.3em" />Qualquer um pode responder</button>
-                                </div>
-                                <div className="divider"></div>
-                                <div className="normal tweet-modal-row">
-                                    <button className="ripple-effect ripples-theme tweet-modal-icon-button"><MdImage size="1.6em" /></button>
-                                    <button className="ripple-effect ripples-theme tweet-modal-icon-button"><MdGif size="1.6em" /></button>
-                                    <button className="ripple-effect ripples-theme tweet-modal-icon-button"><BiPoll size="1.6em" /></button>
-                                    <button className="ripple-effect ripples-theme tweet-modal-icon-button"><HiOutlineEmojiHappy size="1.6em" /></button>
-                                    <button className="ripple-effect ripples-theme tweet-modal-icon-button"><IoCalendarSharp size="1.6em" /></button>
-                                    <button className="ripple-effect ripples-light tweet-modal-button">Tweetar</button>
-                                </div>
-                            </div>
-                        </div>
+                        <TweetComposer rowsNumber={ 4 } charachterCount={ 0 } showOptions={ true } />
                     </div>
                 </div>
             }
