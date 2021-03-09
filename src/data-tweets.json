@@ -26,9 +26,9 @@
             "isUserFollowed": false,
             "tweetText": "CEna foda",
             "tweetImageUrl": "2.png",
-            "numberOfComments": 237,
-            "numberOfRetweets": "5k",
-            "numberOfLikes": "18k",
+            "numberOfComments": 7,
+            "numberOfRetweets": 98,
+            "numberOfLikes": 180,
             "isTweetRetweeted": false,
             "isTweetLiked": false
         },
@@ -42,9 +42,9 @@
             "isUserFollowed": true,
             "tweetText": "Céu foda fodase",
             "tweetImageUrl": "sky.jpg",
-            "numberOfComments": "18k",
-            "numberOfRetweets": "156k",
-            "numberOfLikes": "960k",
+            "numberOfComments": 18,
+            "numberOfRetweets": 156,
+            "numberOfLikes": 960,
             "isTweetRetweeted": true,
             "isTweetLiked": true
         }

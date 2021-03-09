@@ -10,6 +10,10 @@ import { useState } from 'react';
 export default function Tweet(props: any) {
     const [isUserDropdownOpen, setUserDropdownOpen] = useState(false);
     const [isOperationsDropdownOpen, setOperationsDropdownOpen] = useState(false);
+    const [isTweetLiked, setTweetLiked] = useState(props.isTweetLiked);
+    const [isTweetRetweeted, setTweetRetweeted] = useState(props.isTweetRetweeted);
+    const [numberOfLikes, setNumberOfLikes] = useState(props.numberOfLikes);
+    const [numberOfRetweets, setNumberOfRetweets] = useState(props.numberOfRetweets);
 
     return (
         <div className="tweet">
@@ -48,10 +52,10 @@ export default function Tweet(props: any) {
                     <button className={"ripple-effect ripples-theme tweet-icon-button operation comment"}><MdChatBubbleOutline size="1.3em" /></button><span>{ props.numberOfComments }</span>
                 </div>
                 <div className="operation-container">
-                    <button className={`ripple-effect ripples-green tweet-icon-button operation retweet ${ props.isTweetRetweeted && 'retweeted' }`}><FaRetweet size="1.3em" /></button><span>{ props.numberOfRetweets }</span>
+                    <button className={`ripple-effect ripples-green tweet-icon-button operation retweet ${ isTweetRetweeted && 'retweeted' }`} onClick={ () => { setTweetRetweeted(!isTweetRetweeted); isTweetRetweeted ? setNumberOfRetweets(numberOfRetweets - 1) : setNumberOfRetweets(numberOfRetweets + 1) } }><FaRetweet size="1.3em" /></button><span>{ numberOfRetweets }</span>
                 </div>
                 <div className="operation-container">
-                    <button className={`ripple-effect ripples-pink tweet-icon-button operation like ${ props.isTweetLiked && 'liked' }`}>{ props.isTweetLiked ? <FaHeart size="1.3em" /> : <FaRegHeart size="1.3em" /> }</button><span>{ props.numberOfLikes }</span>
+                    <button className={`ripple-effect ripples-pink tweet-icon-button operation like ${ isTweetLiked && 'liked' }`} onClick={ () => { setTweetLiked(!isTweetLiked); isTweetLiked ? setNumberOfLikes(numberOfLikes - 1) : setNumberOfLikes(numberOfLikes + 1) } }>{ isTweetLiked ? <FaHeart size="1.3em" /> : <FaRegHeart size="1.3em" /> }</button><span>{ numberOfLikes }</span>
                 </div>
                 <div className={`transparent-overlay tweet-overlay ${ isOperationsDropdownOpen ? 'open' : 'close' }`} onClick={ () => { setOperationsDropdownOpen(false) } } ></div>
                 <div className="dropdown-container">
