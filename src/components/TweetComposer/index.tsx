@@ -15,7 +15,7 @@ export default function TweetComposer(props: any) {
             <div className="tweet-composer-content">
                 <FaUserCircle className="tweet-composer-user-image" size="3.2em" />
                 <div className="tweet-composer">
-                    <textarea onChange={ (e) => { setCharachterCount(e.target.value.length); !showOptions && setShowOptions(true) } } onClick={ () => !showOptions && setShowOptions(true) } onFocus={ () => !props.showOptions && setShowOptions(true) } onKeyDown={ e => e.key === 'Escape' && !props.showOptions && setShowOptions(false) } className="tweet-composer-input" rows={ props.rowsNumber } placeholder="O que está acontecendo?"/>
+                    <textarea onChange={(e) => { setCharachterCount(e.target.value.length); !showOptions && setShowOptions(true) }} onClick={() => !showOptions && setShowOptions(true)} onFocus={() => !props.showOptions && setShowOptions(true)} onKeyDown={e => e.key === 'Escape' && !props.showOptions && setShowOptions(false)} className="tweet-composer-input" rows={props.rowsNumber} placeholder="O que está acontecendo?" />
                     {showOptions &&
                         <>
                             <div className="allowed-responses-container">
@@ -33,9 +33,9 @@ export default function TweetComposer(props: any) {
                 <button className="ripple-effect ripples-theme tweet-composer-icon-button"><HiOutlineEmojiHappy size="1.6em" /></button>
                 <button className="ripple-effect ripples-theme tweet-composer-icon-button"><IoCalendarSharp size="1.6em" /></button>
                 <div className="charachter-count-container">
-                    <p className="charachter-count"><span className={ charachterCount > 280 ? 'limit-reached' : '' }>{ 280 - charachterCount }</span></p>
+                    <p className="charachter-count"><span className={charachterCount > 280 ? 'limit-reached' : ''}>{280 - charachterCount}</span></p>
                 </div>
-                <button className={`${charachterCount > 0 ? 'ripple-effect ripples-light' : 'disabled' } tweet-composer-button`} disabled={ charachterCount > 0 ? false : true }>Tweetar</button>
+                <button className={`${charachterCount > 0 ? 'ripple-effect ripples-light' : 'disabled'} tweet-composer-button`} disabled={charachterCount > 0 ? false : true}>Tweetar</button>
             </div>
         </div>
     );

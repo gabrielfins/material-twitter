@@ -1,0 +1,19 @@
+{
+    "recommendedUsers": [
+        {
+            "id": 0,
+            "name": "Usuário",
+            "userName": "usuario"
+        },
+        {
+            "id": 1,
+            "name": "Usuário 1",
+            "userName": "usuario1"
+        },
+        {
+            "id": 2,
+            "name": "Usuário 2",
+            "userName": "usuario2"
+        }
+    ]
+}

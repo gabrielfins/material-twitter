@@ -1,0 +1,64 @@
+{
+    "trendingTopics": [
+        {
+            "id": 0,
+            "position": 1,
+            "title": "Vitinho",
+            "amountOfTweets": "91,4 mil"
+        },
+        {
+            "id": 1,
+            "position": 2,
+            "title": "Bonner",
+            "amountOfTweets": "142 mil"
+        },
+        {
+            "id": 2,
+            "position": 3,
+            "title": "#Benzinho",
+            "amountOfTweets": "2.015"
+        },
+        {
+            "id": 3,
+            "position": 4,
+            "title": "#QuintaDetremudaSdv",
+            "amountOfTweets": "2.699"
+        },
+        {
+            "id": 4,
+            "position": 5,
+            "title": "VEM NA COZINHA",
+            "amountOfTweets": "436 mil"
+        },
+        {
+            "id": 5,
+            "position": 6,
+            "title": "Quão",
+            "amountOfTweets": "30,3 mil"
+        },
+        {
+            "id": 6,
+            "position": 7,
+            "title": "#AsiaRisingForever",
+            "amountOfTweets": "125 mil"
+        },
+        {
+            "id": 7,
+            "position": 8,
+            "title": "#ILoveMeRemix",
+            "amountOfTweets": "1.718"
+        },
+        {
+            "id": 8,
+            "position": 9,
+            "title": "Brad Pitt",
+            "amountOfTweets": "15 mil"
+        },
+        {
+            "id": 9,
+            "position": 10,
+            "title": "Spotify",
+            "amountOfTweets": "895 mil"
+        }
+    ]
+}
