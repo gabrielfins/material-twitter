@@ -64,7 +64,6 @@
     justify-content: center;
     background-color: transparent;
     color: var(--theme-color);
-    text-transform: uppercase;
     cursor: pointer;
     transition: .2s;
 
@@ -74,7 +73,7 @@
 }
 
 .see-more-button {
-    height: 52px;
+    height: 46px;
     padding: 0 20px;
     border: none;
     border-top: 1px solid var(--light-highlight-color);
@@ -82,7 +81,6 @@
     align-items: center;
     background-color: transparent;
     color: var(--theme-color);
-    font-size: 18px;
     cursor: pointer;
     transition: .2s;
 
