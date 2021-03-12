@@ -47,6 +47,38 @@
             "numberOfLikes": 960,
             "isTweetRetweeted": true,
             "isTweetLiked": true
+        },
+        {
+            "id": 3,
+            "userImageUrl": "",
+            "userName": "Usuário 2",
+            "userUsername": "usuario2",
+            "timeFromPosting": "12h",
+            "timePosted": "00:05",
+            "isUserFollowed": true,
+            "tweetText": "Péssimo dia a todos 👍",
+            "tweetImageUrl": "",
+            "numberOfComments": 900,
+            "numberOfRetweets": 104,
+            "numberOfLikes": 666,
+            "isTweetRetweeted": true,
+            "isTweetLiked": true
+        },
+        {
+            "id": 4,
+            "userImageUrl": "",
+            "userName": "Usuário 2",
+            "userUsername": "usuario2",
+            "timeFromPosting": "13h",
+            "timePosted": "23:14",
+            "isUserFollowed": false,
+            "tweetText": "AAAAAAAAAAAAAAAAaaaaaaaaaaaaaAAAAAAAAAAaaaaaaaaaaa",
+            "tweetImageUrl": "",
+            "numberOfComments": 1,
+            "numberOfRetweets": 5,
+            "numberOfLikes": 18,
+            "isTweetRetweeted": true,
+            "isTweetLiked": true
         }
     ]
 }

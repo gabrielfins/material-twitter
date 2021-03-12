@@ -26,6 +26,8 @@
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
 
@@ -34,8 +36,14 @@
     }
 }
 
+html {
+    display: flex;
+    width: 100%;
+}
+
 body {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     padding-top: 64px;
     display: flex;
     flex-direction: column;

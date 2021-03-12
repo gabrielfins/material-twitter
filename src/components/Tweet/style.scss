@@ -120,6 +120,7 @@
 
 .tweet-content-text {
     margin: 0 0 10px 0;
+    word-break: break-all;
 }
 
 .operation-container {
@@ -205,4 +206,11 @@
 
 .transparent-overlay.tweet-overlay {
     z-index: 3;
+}
+
+@media only screen and (max-width: 700px) {
+    .operation-container {
+        margin-right: 15px;
+        font-size: 14px;
+    }
 }

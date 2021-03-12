@@ -19,10 +19,10 @@ export default function Navbar() {
         <nav className="navbar">
             <div className="nav-wrapper">
                 <div className="nav-content">
-                    <NavLink className="ripple-effect nav-button" exact to="/" activeClassName="active"><MdHome size="2em" /></NavLink>
-                    <NavLink className="ripple-effect nav-button" to="/explore" activeClassName="active"><MdExplore size="2em" /></NavLink>
-                    <NavLink className="ripple-effect nav-button" to="/notifications" activeClassName="active"><MdNotifications size="2em" /></NavLink>
-                    <NavLink className="ripple-effect nav-button" to="/messages" activeClassName="active"><MdEmail size="2em" /></NavLink>
+                    <NavLink className="ripple-effect nav-button" exact to="/" activeClassName="active"><MdHome className="nav-link-icon" size="2em" /></NavLink>
+                    <NavLink className="ripple-effect nav-button" to="/explore" activeClassName="active"><MdExplore className="nav-link-icon" size="2em" /></NavLink>
+                    <NavLink className="ripple-effect nav-button" to="/notifications" activeClassName="active"><MdNotifications className="nav-link-icon" size="2em" /></NavLink>
+                    <NavLink className="ripple-effect nav-button" to="/messages" activeClassName="active"><MdEmail className="nav-link-icon" size="2em" /></NavLink>
                 </div>
                 <NavLink className="ripple-effect ripples-theme logo-container" exact to="/"><FaTwitter size="2em" /></NavLink>
                 <div className="left nav-content">
