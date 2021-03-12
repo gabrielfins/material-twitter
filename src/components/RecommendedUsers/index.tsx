@@ -13,7 +13,7 @@ export default function RecommendedUsers() {
                 {data.recommendedUsers.map((data) => {
                     return (
                         <div role="button" key={data.id} className="recommended-user">
-                            <FaUserCircle className="recommended-user-image" />
+                            {data.userImageUrl !== "" ? <img className="recommended-user-image" src={"../../images/" + data.userImageUrl} alt=""/> : <FaUserCircle className="recommended-user-image" /> }
                             <div className="recommended-user-info">
                                 <span>{data.name}</span>
                                 <span>@{data.userName}</span>

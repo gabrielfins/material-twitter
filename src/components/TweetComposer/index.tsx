@@ -1,6 +1,5 @@
 import './style.scss';
 import { useState } from 'react';
-import { FaUserCircle } from 'react-icons/fa';
 import { BiWorld, BiPoll } from 'react-icons/bi';
 import { MdImage, MdGif } from 'react-icons/md';
 import { HiOutlineEmojiHappy } from 'react-icons/hi';
@@ -13,7 +12,7 @@ export default function TweetComposer(props: any) {
     return (
         <div className="tweet-composer-container">
             <div className="tweet-composer-content">
-                <FaUserCircle className="tweet-composer-user-image" size="3.2em" />
+                <img className="tweet-composer-user-image" src="../../images/profile.png" alt="" />
                 <div className="tweet-composer">
                     <textarea onChange={(e) => { setCharachterCount(e.target.value.length); !showOptions && setShowOptions(true) }} onClick={() => !showOptions && setShowOptions(true)} onFocus={() => !props.showOptions && setShowOptions(true)} onKeyDown={e => e.key === 'Escape' && !props.showOptions && setShowOptions(false)} className="tweet-composer-input" rows={props.rowsNumber} placeholder="O que está acontecendo?" />
                     {showOptions &&

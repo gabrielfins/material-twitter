@@ -1,7 +1,6 @@
 import './style.scss';
 import '@gabrielfins/ripple-effect';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { MdHome, MdExplore, MdNotifications, MdEmail, MdSearch, MdSubject, MdList, MdBookmark, MdSettings, MdShowChart, MdAttachMoney, MdHelpOutline, MdBrush, MdClose } from 'react-icons/md';
 import { FaTwitter } from 'react-icons/fa';
 import TweetComposer from '../TweetComposer';
@@ -19,12 +18,12 @@ export default function Navbar() {
         <nav className="navbar">
             <div className="nav-wrapper">
                 <div className="nav-content">
-                    <NavLink className="ripple-effect nav-button" exact to="/" activeClassName="active"><MdHome className="nav-link-icon" size="2em" /></NavLink>
-                    <NavLink className="ripple-effect nav-button" to="/explore" activeClassName="active"><MdExplore className="nav-link-icon" size="2em" /></NavLink>
-                    <NavLink className="ripple-effect nav-button" to="/notifications" activeClassName="active"><MdNotifications className="nav-link-icon" size="2em" /></NavLink>
-                    <NavLink className="ripple-effect nav-button" to="/messages" activeClassName="active"><MdEmail className="nav-link-icon" size="2em" /></NavLink>
+                    <button className="ripple-effect nav-button active"><MdHome className="nav-link-icon" size="2em" /></button>
+                    <button className="ripple-effect nav-button"><MdExplore className="nav-link-icon" size="2em" /></button>
+                    <button className="ripple-effect nav-button"><MdNotifications className="nav-link-icon" size="2em" /></button>
+                    <button className="ripple-effect nav-button"><MdEmail className="nav-link-icon" size="2em" /></button>
                 </div>
-                <NavLink className="ripple-effect ripples-theme logo-container" exact to="/"><FaTwitter size="2em" /></NavLink>
+                <button className="ripple-effect ripples-theme logo-container"><FaTwitter size="2em" /></button>
                 <div className="left nav-content">
                     <div className="search-box-container">
                         <div className="search-box-content">
@@ -34,12 +33,12 @@ export default function Navbar() {
                     </div>
                     <div className="nav-profile-container">
                         <div className={`transparent-overlay ${isDropdownOpen && 'open'}`} onClick={() => setDropdownOpen(!isDropdownOpen)}></div>
-                        <button className="ripple-effect nav-account-button" onClick={() => setDropdownOpen(!isDropdownOpen)}><img src="../../images/FOTO.jpg" alt="" /></button>
+                        <button className="ripple-effect nav-account-button" onClick={() => setDropdownOpen(!isDropdownOpen)}><img src="../../images/profile.png" alt="" /></button>
                         <div className={`account-dropdown ${(isDropdownOpen ? 'open' : 'close')}`}>
                             <div className="account-info">
                                 <button className="ripple-effect user-button">
-                                    <p className="account-name">Gabriel</p>
-                                    <p className="account-user-name">@gabrielfins</p>
+                                    <p className="account-name">Usuário</p>
+                                    <p className="account-user-name">@usuariologado</p>
                                 </button>
                             </div>
                             <div className="divider"></div>

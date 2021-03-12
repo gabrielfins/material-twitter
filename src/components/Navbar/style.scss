@@ -28,11 +28,14 @@
 .nav-button {
     width: 100px;
     height: 100%;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     color: var(--secondary-text-color);
     transition: background-color .2s;
+    cursor: pointer;
 
     &:hover {
         background-color: darken(#FFFFFF, 8);
@@ -48,11 +51,14 @@
 .logo-container {
     width: 100px;
     margin: 0 auto;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     color: var(--theme-color);
     transition: .1s;
+    cursor: pointer;
 
     &:hover {
         background-color: rgba(29, 161, 242, .08);

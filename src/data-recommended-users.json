@@ -2,18 +2,21 @@
     "recommendedUsers": [
         {
             "id": 0,
-            "name": "Usuário",
-            "userName": "usuario"
+            "name": "Usuário 7",
+            "userName": "usuario7",
+            "userImageUrl": "illustration-men.png"
         },
         {
             "id": 1,
-            "name": "Usuário 1",
-            "userName": "usuario1"
+            "name": "Usuário 8",
+            "userName": "usuario8",
+            "userImageUrl": "illustration-woman.png"
         },
         {
             "id": 2,
-            "name": "Usuário 2",
-            "userName": "usuario2"
+            "name": "Usuário 9",
+            "userName": "usuario9",
+            "userImageUrl": ""
         }
     ]
 }

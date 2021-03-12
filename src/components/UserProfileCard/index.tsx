@@ -10,16 +10,16 @@ export default function UserProfileCard() {
         <div className="user-profile-card">
             <div className="user-pictures">
                 <div className="header-picture-container">
-                    <img className="header-picture" src="../../images/2.png" alt="" />
+                    <img className="header-picture" src="../../images/lsd.jpg" alt="" />
                 </div>
-                <img className="profile-picture" src="../../images/FOTO.jpg" alt="" />
+                <img className="profile-picture" src="../../images/profile.png" alt="" />
             </div>
             <div className="accounts-dropdown-container">
                 <div className="accounts-dropdown-content">
                     <button className="ripple-effect accounts-dropdown-button" onClick={() => setDropdownOpen(!isDropdownOpen)}>
                         <div className="user-username">
-                            <h2>Gabriel</h2>
-                            <span>@gabrielfins</span>
+                            <h2>Usuário</h2>
+                            <span>@usuariologado</span>
                         </div>
                         <MdArrowDropDown className="accounts-dropdown-icon" size="1.5em" />
                     </button>
