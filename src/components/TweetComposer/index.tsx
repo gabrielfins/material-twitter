@@ -18,7 +18,7 @@ export default function TweetComposer(props: any) {
                     {showOptions &&
                         <>
                             <div className="allowed-responses-container">
-                                <button className="ripple-effect ripples-theme allowed-responses"><BiWorld className="allowed-responses-icon" size="1.3em" />Qualquer um pode responder</button>
+                                <button className="md-ripples ripples-theme allowed-responses"><BiWorld className="allowed-responses-icon" size="1.3em" />Qualquer um pode responder</button>
                             </div>
                             <div className="divider"></div>
                         </>
@@ -26,15 +26,15 @@ export default function TweetComposer(props: any) {
                 </div>
             </div>
             <div className="tweet-composer-options-container">
-                <button className="ripple-effect ripples-theme tweet-composer-icon-button"><MdImage size="1.6em" /></button>
-                <button className="ripple-effect ripples-theme tweet-composer-icon-button"><MdGif size="1.6em" /></button>
-                <button className="ripple-effect ripples-theme tweet-composer-icon-button"><BiPoll size="1.6em" /></button>
-                <button className="ripple-effect ripples-theme tweet-composer-icon-button"><HiOutlineEmojiHappy size="1.6em" /></button>
-                <button className="ripple-effect ripples-theme tweet-composer-icon-button"><IoCalendarSharp size="1.6em" /></button>
+                <button className="md-ripples ripples-theme tweet-composer-icon-button"><MdImage size="1.6em" /></button>
+                <button className="md-ripples ripples-theme tweet-composer-icon-button"><MdGif size="1.6em" /></button>
+                <button className="md-ripples ripples-theme tweet-composer-icon-button"><BiPoll size="1.6em" /></button>
+                <button className="md-ripples ripples-theme tweet-composer-icon-button"><HiOutlineEmojiHappy size="1.6em" /></button>
+                <button className="md-ripples ripples-theme tweet-composer-icon-button"><IoCalendarSharp size="1.6em" /></button>
                 <div className="charachter-count-container">
                     <p className="charachter-count"><span className={charachterCount > 280 ? 'limit-reached' : ''}>{280 - charachterCount}</span></p>
                 </div>
-                <button className={`${charachterCount > 0 ? 'ripple-effect ripples-light' : 'disabled'} tweet-composer-button`} disabled={charachterCount > 0 ? false : true}>Tweetar</button>
+                <button className={`${charachterCount > 0 ? 'md-ripples ripples-light' : 'disabled'} tweet-composer-button`} disabled={charachterCount > 0 ? false : true}>Tweetar</button>
             </div>
         </div>
     );

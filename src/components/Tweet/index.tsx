@@ -26,15 +26,15 @@ export default function Tweet(props: any) {
                         <p className="tweet-user-info"><span className="user-name">{props.userName}</span><span>@{props.userUsername}</span><span>• {props.timeFromPosting}</span></p>
                         <div className={`transparent-overlay tweet-overlay ${isUserDropdownOpen ? 'open' : 'close'}`} onClick={() => { setUserDropdownOpen(false) }} ></div>
                         <div className="dropdown-container">
-                            <button className="ripple-effect ripples-theme tweet-icon-button dropdown" onClick={() => setUserDropdownOpen(!isUserDropdownOpen)}><MdMoreVert size="1.3em" /></button>
+                            <button className="md-ripples ripples-theme tweet-icon-button dropdown" onClick={() => setUserDropdownOpen(!isUserDropdownOpen)}><MdMoreVert size="1.3em" /></button>
                             {isUserDropdownOpen &&
                                 <div className="tweet-dropdown user-actions">
-                                    <button className="ripple-effect">{props.isUserFollowed ? <IoPersonRemoveSharp className="dropdown-icon" size="1.3em" /> : <IoPersonAddSharp className="dropdown-icon" size="1.3em" />}{` ${props.isUserFollowed ? "Deixar de seguir" : "Seguir"} @${props.userUsername} `}</button>
-                                    <button className="ripple-effect"><MdPlaylistAdd className="dropdown-icon" size="1.3em" />Adicionar/remover @{props.userUsername} das Listas</button>
-                                    <button className="ripple-effect"><MdVolumeOff className="dropdown-icon" size="1.3em" />Silenciar @{props.userUsername}</button>
-                                    <button className="ripple-effect"><AiOutlineStop className="dropdown-icon" size="1.3em" />Bloquear @{props.userUsername}</button>
-                                    <button className="ripple-effect"><ImEmbed2 className="dropdown-icon" size="1.3em" />Incorporar Tweet</button>
-                                    <button className="ripple-effect"><IoFlag className="dropdown-icon" size="1.3em" />Denunciar Tweet</button>
+                                    <button className="md-ripples">{props.isUserFollowed ? <IoPersonRemoveSharp className="dropdown-icon" size="1.3em" /> : <IoPersonAddSharp className="dropdown-icon" size="1.3em" />}{` ${props.isUserFollowed ? "Deixar de seguir" : "Seguir"} @${props.userUsername} `}</button>
+                                    <button className="md-ripples"><MdPlaylistAdd className="dropdown-icon" size="1.3em" />Adicionar/remover @{props.userUsername} das Listas</button>
+                                    <button className="md-ripples"><MdVolumeOff className="dropdown-icon" size="1.3em" />Silenciar @{props.userUsername}</button>
+                                    <button className="md-ripples"><AiOutlineStop className="dropdown-icon" size="1.3em" />Bloquear @{props.userUsername}</button>
+                                    <button className="md-ripples"><ImEmbed2 className="dropdown-icon" size="1.3em" />Incorporar Tweet</button>
+                                    <button className="md-ripples"><IoFlag className="dropdown-icon" size="1.3em" />Denunciar Tweet</button>
                                 </div>
                             }
                         </div>
@@ -49,23 +49,23 @@ export default function Tweet(props: any) {
             </div>
             <div className="tweet-row operations">
                 <div className="operation-container">
-                    <button className={"ripple-effect ripples-theme tweet-icon-button operation comment"}><MdChatBubbleOutline size="1.3em" /></button><span>{props.numberOfComments}</span>
+                    <button className={"md-ripples ripples-theme tweet-icon-button operation comment"}><MdChatBubbleOutline size="1.3em" /></button><span>{props.numberOfComments}</span>
                 </div>
                 <div className="operation-container">
-                    <button className={`ripple-effect ripples-green tweet-icon-button operation retweet ${isTweetRetweeted && 'retweeted'}`} onClick={() => { setTweetRetweeted(!isTweetRetweeted); isTweetRetweeted ? setNumberOfRetweets(numberOfRetweets - 1) : setNumberOfRetweets(numberOfRetweets + 1) }}><FaRetweet size="1.3em" /></button><span>{numberOfRetweets}</span>
+                    <button className={`md-ripples ripples-green tweet-icon-button operation retweet ${isTweetRetweeted && 'retweeted'}`} onClick={() => { setTweetRetweeted(!isTweetRetweeted); isTweetRetweeted ? setNumberOfRetweets(numberOfRetweets - 1) : setNumberOfRetweets(numberOfRetweets + 1) }}><FaRetweet size="1.3em" /></button><span>{numberOfRetweets}</span>
                 </div>
                 <div className="operation-container">
-                    <button className={`ripple-effect ripples-pink tweet-icon-button operation like ${isTweetLiked && 'liked'}`} onClick={() => { setTweetLiked(!isTweetLiked); isTweetLiked ? setNumberOfLikes(numberOfLikes - 1) : setNumberOfLikes(numberOfLikes + 1) }}>{isTweetLiked ? <FaHeart size="1.3em" /> : <FaRegHeart size="1.3em" />}</button><span>{numberOfLikes}</span>
+                    <button className={`md-ripples ripples-pink tweet-icon-button operation like ${isTweetLiked && 'liked'}`} onClick={() => { setTweetLiked(!isTweetLiked); isTweetLiked ? setNumberOfLikes(numberOfLikes - 1) : setNumberOfLikes(numberOfLikes + 1) }}>{isTweetLiked ? <FaHeart size="1.3em" /> : <FaRegHeart size="1.3em" />}</button><span>{numberOfLikes}</span>
                 </div>
                 <div className={`transparent-overlay tweet-overlay ${isOperationsDropdownOpen ? 'open' : 'close'}`} onClick={() => { setOperationsDropdownOpen(false) }} ></div>
                 <div className="dropdown-container">
-                    <button className="ripple-effect ripples-theme tweet-icon-button dropdown" onClick={() => setOperationsDropdownOpen(!isOperationsDropdownOpen)}><MdFileUpload size="1.3em" /></button>
+                    <button className="md-ripples ripples-theme tweet-icon-button dropdown" onClick={() => setOperationsDropdownOpen(!isOperationsDropdownOpen)}><MdFileUpload size="1.3em" /></button>
                     {isOperationsDropdownOpen &&
                         <div className={"tweet-dropdown extras"}>
-                            <button className="ripple-effect"><MdMail className="dropdown-icon" size="1.3em" />Enviar por Mensagem Direta</button>
-                            <button className="ripple-effect"><MdBookmark className="dropdown-icon" size="1.3em" />Salvar Tweet</button>
-                            <button className="ripple-effect"><FaLink className="dropdown-icon" size="1.3em" />Copiar link para o Tweet</button>
-                            <button className="ripple-effect"><MdFileUpload className="dropdown-icon" size="1.3em" />Compartilhar Tweet via...</button>
+                            <button className="md-ripples"><MdMail className="dropdown-icon" size="1.3em" />Enviar por Mensagem Direta</button>
+                            <button className="md-ripples"><MdBookmark className="dropdown-icon" size="1.3em" />Salvar Tweet</button>
+                            <button className="md-ripples"><FaLink className="dropdown-icon" size="1.3em" />Copiar link para o Tweet</button>
+                            <button className="md-ripples"><MdFileUpload className="dropdown-icon" size="1.3em" />Compartilhar Tweet via...</button>
                         </div>
                     }
                 </div>

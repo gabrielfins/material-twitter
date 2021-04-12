@@ -18,12 +18,12 @@ export default function RecommendedUsers() {
                                 <span>{data.name}</span>
                                 <span>@{data.userName}</span>
                             </div>
-                            <button className="ripple-effect ripples-theme follow-button">Seguir</button>
+                            <button className="md-ripples ripples-theme follow-button">Seguir</button>
                         </div>
                     );
                 })}
             </div>
-            <button className="ripple-effect see-more-button">Ver mais</button>
+            <button className="md-ripples see-more-button">Ver mais</button>
         </div>
     );
 }
